@@ -1,4 +1,3 @@
-.openapi-generator-ignore
 Build.ps1
 README.md
 appveyor.yml
@@ -28,12 +27,3 @@ src/PSPetOnlineStore/Private/HttpSignatureAuth.ps1
 src/PSPetOnlineStore/Private/Out-DebugParameter.ps1
 src/PSPetOnlineStore/Private/RSAEncryptionProvider.cs
 src/PSPetOnlineStore/en-US/about_PSPetOnlineStore.help.txt
-tests/Api/PetApi.Tests.ps1
-tests/Api/StoreApi.Tests.ps1
-tests/Api/UserApi.Tests.ps1
-tests/Model/ApiResponse.Tests.ps1
-tests/Model/Category.Tests.ps1
-tests/Model/Order.Tests.ps1
-tests/Model/Pet.Tests.ps1
-tests/Model/Tag.Tests.ps1
-tests/Model/User.Tests.ps1
