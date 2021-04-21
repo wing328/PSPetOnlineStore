@@ -7,10 +7,10 @@
 
 version: 1.0.{build}
 image:
-  #- Visual Studio 2019 # PS 7.x
-  - Visual Studio 2017 # PS 5.x, 6.x
-  #- Ubuntu # PS 6.x
-  # ref: https://www.appveyor.com/docs/build-environment/#build-worker-images
+  #- Visual Studio 2019 # PWSH 7.x
+  - Visual Studio 2017 # PS 5.x, PWSH 6.x
+  #- Ubuntu # PWSH 6.x
+  # ref: https://www.appveyor.com/docs/windows-images-software/
 install:
   - pwsh: $PSVersionTable.PSVersion
   - pwsh: Install-Module Pester -Force -Scope CurrentUser
@@ -26,7 +26,7 @@ test_script:
       }
 deploy_script:
   - pwsh: |
-      if ($env:APPVEYOR_REPO_TAG -eq $true -and $env:NuGetApiKey -ne $null -and $env:APPVEYOR_BUILD_WORKER_IMAGE -eq "Visual Studio 2019") {
+      if ($env:APPVEYOR_REPO_TAG -eq $true -and $env:NuGetApiKey -ne $null) {
           .\Build.ps1
           try {
               Publish-Module -NuGetApiKey $env:NuGetApiKey -Path .\src\PSPetOnlineStore\ -Confirm:$False -Verbose
