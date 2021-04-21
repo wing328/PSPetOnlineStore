@@ -8,14 +8,9 @@
 Describe -tag 'PSPetOnlineStore' -name 'PetApi' {
     Context 'Add-Pet' {
         It 'Test Add-Pet' {
-            $Pet = (Initialize-Pet -Id 33311 -Category (Initialize-Category -Id 333 -Name "Name_test") -Name "Name_test" -PhotoUrls @("PhotoUrls_example_test") -Tags @((Initialize-Tag -Id 333 -Name "Name_test")) -Status "available") # Pet | Pet object that needs to be added to the store
-            Add-Pet -Pet $Pet
-
-            # get back the pet from the server
-            $Result = Get-PetById -PetId 33311
-
-            $Result."id" | Should -Be 33311
-            $Result."name" | Should -Be "Name_test"
+            #$TestResult = Add-Pet -Pet "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
         }
     }
 
