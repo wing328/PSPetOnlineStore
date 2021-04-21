@@ -54,12 +54,12 @@ $Manifest = @{
     CompanyName = 'openapitools.org'
     Description = 'PSPetOnlineStore - the PowerShell module for OpenAPI Petstore'
 
-    ModuleVersion = '0.3.4'
+    ModuleVersion = '0.3.5'
 
     RootModule = 'PSPetOnlineStore.psm1'
-    Guid = '{67918285-0761-4508-8F9B-BFC5D782AB07}' # Has to be static, otherwise each new build will be considered different module
+    Guid = '{FC48C487-9D5F-4D4D-B0E5-7A97FC5142BD}' # Has to be static, otherwise each new build will be considered different module
 
-    PowerShellVersion = '6.2'
+    PowerShellVersion = '5.0'
 
     FunctionsToExport = $FunctionPath | Get-ChildItem -Filter *.ps1 | Get-FunctionsToExport
 
